@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Doctor Appointment</title>
+</head>
+
+<body>
+    <h1>Doctor Appointment Booking System</h1>
+    <div class="container">
+        <div class="appointment-section">
+            <h2>Book appointment</h2>
+            <label for="patientName">Patient Name</label>
+            <input type="text" id="patientName" placeholder="Enter name">
+            <label for="doctorName">Doctor Name</label>
+            <select id="doctorName"></select>
+            <label for="appointmentDate">Appointment Date</label>
+            <input type="date" id="appointmentDate">
+            <label for="appointmentTime">Appointment Time</label>
+            <input type="time" id="appointmentTime">
+
+            <button onclick="handleAppointment()">Book Appointment</button>
+        </div>
+        <div class="appointment-section">
+            <h2>Cancel Appointment</h2>
+            <label for="cancelAppointmentId">Appointment ID</label>
+            <input type="text" id="cancelAppointmentId">
+            <button onclick="cancelAppointment()">Cancel Appointment</button>
+        </div>
+        <div class="appointment-section">
+            <h2>View Appointment</h2>
+            <button onclick="showAppointments()">Show Appointment</button>
+            <pre id="appointmentDisplay"></pre>
+        </div>
+
+        <div class="appointment-section">
+            <h2>Doctor List</h2>
+            <div id="doctorCards"></div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
